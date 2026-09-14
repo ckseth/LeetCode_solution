@@ -7,5 +7,11 @@
 -- END;
 
 
+-- UPDATE salary
+-- SET sex = IF(sex = 'f', 'm', 'f');
+
 UPDATE salary
-SET sex = IF(sex = 'f', 'm', 'f');
+SET sex = CASE sex
+    WHEN 'f' THEN 'm'
+    WHEN 'm' THEN 'f'
+END;
