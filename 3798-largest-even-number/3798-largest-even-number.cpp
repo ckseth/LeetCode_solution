@@ -8,10 +8,13 @@ public:
                 lastIdx =i;
             }
         }
-        
+
         if(lastIdx == -1){
             return "";
         }
-        return s.substr(0, lastIdx +1);
+        // return s.substr(0, lastIdx +1);
+        
+        s.resize(lastIdx + 1);
+        return s;
     }
 };
