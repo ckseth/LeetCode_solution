@@ -1,18 +1,13 @@
 class Solution {
 public:
     string convert(string s, int numRows) {
-        // if 1 row is there then no box will be created 
         if (numRows == 1 || numRows >= s.length()) 
             return s;
-
-        // create box
         vector<string> rows(numRows, "");
         
         // 2. var for row num and direction
         int current_row = 0;
         bool going_down = false;
-
-        // one letter at one time
         for (char c : s) {
             // keep letter in current row
             rows[current_row] += c; 
