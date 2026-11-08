@@ -9,11 +9,9 @@ public:
         int current_row = 0;
         bool going_down = false;
         for (char c : s) {
-            // keep letter in current row
+
             rows[current_row] += c; 
 
-            // 4. U-Turn logic
-            // if at topmost there is 0 or at bottom (numRows -1) then change dir
             if (current_row == 0 || current_row == numRows - 1) {
                 going_down = !going_down; // True then False, False then true
             }
